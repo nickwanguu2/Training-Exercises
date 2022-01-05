@@ -24,6 +24,7 @@ public class Main {
                 System.out.println(int3 + " is the greatest.");
             }
         }
+        //exercise 3
         System.out.println("Enter the max.");
         int max = scan.nextInt();
         int n = 1;
@@ -35,7 +36,6 @@ public class Main {
             }
             n += 1;
         }
-
 
     }
 }
