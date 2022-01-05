@@ -5,25 +5,36 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double loan = 10000;
-        double emi = 1000;
-        double interest = 1.03;
-        int numemi = 0;
-        loan *= interest;
-        while(loan > 0){
-            double payed = 0;
-            if (loan >= emi){
-                loan -= emi;
-                payed = emi;
+        //exercise 1
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter 3 numbers.");
+        int int1 = scan.nextInt();
+        int int2 = scan.nextInt();
+        int int3 = scan.nextInt();
+        if(int1 > int2){
+            if(int1 > int3){
+                System.out.println(int1 + " is the greatest.");
             } else {
-                payed = loan;
-                loan = 0;
+                System.out.println(int3 + " is the greatest.");
             }
-            numemi += 1;
-            System.out.println("Paying " + payed + " of installment " + numemi);
-
+        } else {
+            if(int2 > int3){
+                System.out.println(int2 + " is the greatest.");
+            } else {
+                System.out.println(int3 + " is the greatest.");
+            }
         }
-        System.out.println("Number of emis:" + numemi);
+        System.out.println("Enter the max.");
+        int max = scan.nextInt();
+        int n = 1;
+        while (n <= max){
+            if (n % 2 == 0){
+                System.out.println(n + " is even.");
+            } else {
+                System.out.println(n + " is odd.");
+            }
+            n += 1;
+        }
 
 
     }
