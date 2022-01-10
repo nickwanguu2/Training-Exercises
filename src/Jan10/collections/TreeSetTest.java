@@ -1,49 +1,45 @@
 package Jan10.collections;
 
 import java.util.Iterator;
+import java.util.TreeSet;
 
-public class ArrayListClass {
+public class TreeSetTest {
     public static void main(String[] args) {
-        java.util.ArrayList<Integer> intList = new java.util.ArrayList<>();
+        TreeSet<Integer> intSet = new TreeSet<>();
 
-        //Storing elements into an ArrayList
-
-        // 1. Instantiate and add
-        Integer myInt = 10;
-        intList.add(myInt);
+        Integer myInt = new Integer(10);
+        intSet.add(myInt);
 
         // 2. Instantiate and add
-        intList.add(5);
+        intSet.add(new Integer(5));
 
         // 3. Instantiate with auto-boxing and add
         Integer anotherInt = 7;
-        intList.add(anotherInt);
+        intSet.add(anotherInt);
 
         // 4. Autboxing + add
-        intList.add(9);
-        intList.add(1);
-        intList.add(10);
-        intList.add(15);
+        intSet.add(9);
+        intSet.add(1);
+        intSet.add(10);
+        intSet.add(15);
 
         //Retrieve elements of an ArrayList
 
         //1. Generic - application for all collection - Just printing not accesssing each of the elements
         System.out.println("Using toString()");
-        System.out.println(intList.toString()+"\n");
+        System.out.println(intSet.toString()+"\n");
 
         //2. Positional Access - Only Applicable for List implementations
-        for (int i = 0; i < intList.size(); i++){
-            System.out.println("Element at the position "+i+ " is "+intList.get(i));
-        }
+//        for (int i = 0; i < intSet.size(); i++){
+//            System.out.println("Element at the position "+i+ " is "+intSet.get(i));
+//        }
 
         //3. Using Iterator - applicable for all Collection implementations
         System.out.println("Using Iterator");
-        Iterator<Integer> intIterator = intList.iterator();
+        Iterator<Integer> intIterator = intSet.iterator();
         while (intIterator.hasNext()){
             int element = intIterator.next(); // Auto-boxing;
             System.out.println(element);
         }
-
-
     }
 }

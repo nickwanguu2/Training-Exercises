@@ -1,11 +1,11 @@
 package Jan10.collections;
 
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.TreeSet;
 
-public class TreeSetClass {
+public class HashSetTest {
     public static void main(String[] args) {
-        TreeSet<Integer> intSet = new TreeSet<>();
+        HashSet<Integer> intSet = new HashSet<>();
 
         Integer myInt = new Integer(10);
         intSet.add(myInt);

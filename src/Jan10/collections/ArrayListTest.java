@@ -1,45 +1,49 @@
 package Jan10.collections;
 
-import java.util.HashSet;
 import java.util.Iterator;
 
-public class HashSetClass {
+public class ArrayListTest {
     public static void main(String[] args) {
-        HashSet<Integer> intSet = new HashSet<>();
+        java.util.ArrayList<Integer> intList = new java.util.ArrayList<>();
 
-        Integer myInt = new Integer(10);
-        intSet.add(myInt);
+        //Storing elements into an ArrayList
+
+        // 1. Instantiate and add
+        Integer myInt = 10;
+        intList.add(myInt);
 
         // 2. Instantiate and add
-        intSet.add(new Integer(5));
+        intList.add(5);
 
         // 3. Instantiate with auto-boxing and add
         Integer anotherInt = 7;
-        intSet.add(anotherInt);
+        intList.add(anotherInt);
 
         // 4. Autboxing + add
-        intSet.add(9);
-        intSet.add(1);
-        intSet.add(10);
-        intSet.add(15);
+        intList.add(9);
+        intList.add(1);
+        intList.add(10);
+        intList.add(15);
 
         //Retrieve elements of an ArrayList
 
         //1. Generic - application for all collection - Just printing not accesssing each of the elements
         System.out.println("Using toString()");
-        System.out.println(intSet.toString()+"\n");
+        System.out.println(intList.toString()+"\n");
 
         //2. Positional Access - Only Applicable for List implementations
-//        for (int i = 0; i < intSet.size(); i++){
-//            System.out.println("Element at the position "+i+ " is "+intSet.get(i));
-//        }
+        for (int i = 0; i < intList.size(); i++){
+            System.out.println("Element at the position "+i+ " is "+intList.get(i));
+        }
 
         //3. Using Iterator - applicable for all Collection implementations
         System.out.println("Using Iterator");
-        Iterator<Integer> intIterator = intSet.iterator();
+        Iterator<Integer> intIterator = intList.iterator();
         while (intIterator.hasNext()){
             int element = intIterator.next(); // Auto-boxing;
             System.out.println(element);
         }
+
+
     }
 }

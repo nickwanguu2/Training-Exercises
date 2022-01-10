@@ -2,7 +2,7 @@ package Jan10.collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class LinkedListClass {
+public class LinkedListTest {
     public static void main(String[] args) {
         LinkedList<Integer> intList = new LinkedList<>();
 
