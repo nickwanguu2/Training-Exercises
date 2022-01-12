@@ -1,7 +1,6 @@
-package Jan11;
+package Jan12;
 
-
-import Jan11.service.ProcessStudent;
+import Jan12.service.ProcessStudent;
 
 public class Main {
 
